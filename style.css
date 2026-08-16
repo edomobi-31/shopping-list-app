@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: slategray;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Search box */
+
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Input section */
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#itemInput {
+    flex: 2;
+}
+
+#quantityInput {
+    width: 110px;
+}
+
+#itemInput,
+#quantityInput {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#addButton {
+    padding: 12px 18px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #146c43;
+}
+
+/* Shopping list */
+
+#shoppingList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#shoppingList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+/* Item name */
+
+#shoppingList li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Purchased item */
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* Buttons */
+
+#shoppingList button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#shoppingList button:first-child {
+    background-color: #ffc107;
+    color: #212529
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+#shoppingList button:hover {
+    opacity: 0.8;
+}
+
+/* Total items */
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mobile screen */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    #quantityInput {
+        width: 100%;
+    }
+
+    #addButton {
+        width: 100%;
+    }
+
+    #shoppingList li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
