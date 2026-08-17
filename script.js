@@ -1,7 +1,7 @@
 // Shopping Item class
 class ShoppingItem {
-    constructor(name, quantity) {
-        this.id = Date.now();
+    constructor(name, quantity, id = Date.now()) {
+        this.id = id;
         this.name = name;
         this.quantity = Number(quantity);
         this.purchased = false;
@@ -24,7 +24,21 @@ const searchInput = document.getElementById("searchInput");
 
 
 // Get saved items from Local Storage
-let shoppingItems = JSON.parse(localStorage.getItem("shoppingItems")) || [];
+const savedItems = JSON.parse(localStorage.getItem("shoppingItems")) || [];
+
+
+// Convert saved objects back into ShoppingItem objects
+let shoppingItems = savedItems.map(function(item) {
+    const shoppingItem = new ShoppingItem(
+        item.name,
+        item.quantity,
+        item.id
+    );
+
+    shoppingItem.purchased = item.purchased;
+
+    return shoppingItem;
+});
 
 
 // Display saved items when the page loads
@@ -40,8 +54,13 @@ function addItem() {
     const quantity = quantityInput.value;
 
     // Input validation
-    if (itemName === "" || quantity === "" || Number(quantity) < 1) {
-        alert("Please enter a valid item and quantity.");
+    if (itemName === "" || quantity === "") {
+        alert("Please enter an item and quantity.");
+        return;
+    }
+
+    if (Number(quantity) < 1 || !Number.isInteger(Number(quantity))) {
+        alert("Please enter a valid whole number greater than 0.");
         return;
     }
 
@@ -145,6 +164,7 @@ function editItem(id) {
         );
 
         if (newName === null || newName.trim() === "") {
+            alert("Item name cannot be empty.");
             return;
         }
 
@@ -156,8 +176,10 @@ function editItem(id) {
         if (
             newQuantity === null ||
             newQuantity.trim() === "" ||
-            Number(newQuantity) < 1
+            Number(newQuantity) < 1 ||
+            !Number.isInteger(Number(newQuantity))
         ) {
+            alert("Please enter a valid whole number greater than 0.");
             return;
         }
 
