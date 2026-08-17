@@ -126,12 +126,34 @@ Core Features
 
 Testing
 
-The application is tested using both normal and unusual inputs, including:
+## Testing
 
-- Adding valid shopping items and quantities.
-- Searching for existing and non-existing items.
-- Editing and deleting items.
-- Marking items as purchased.
-- Refreshing the page to confirm Local Storage works.
-- Attempting to add an item without a name.
-- Attempting to enter an invalid quantity.
+The application was tested using both normal inputs and unusual or invalid inputs to ensure that the required features work correctly.
+
+### Test Results
+
+| Test | Expected Result | Result |
+|---|---|---|
+| Add a shopping item with a valid quantity | The item appears in the shopping list | Passed |
+| Mark an item as purchased | The item is displayed with a line through it | Passed |
+| Refresh the page | Saved items remain in the shopping list | Passed |
+| Toggle purchased status after refreshing | The purchased status changes correctly | Passed |
+| Edit an item | The item's name and quantity are updated | Passed |
+| Delete an item | The selected item is removed from the list | Passed |
+| Search for an item | Matching items are displayed | Passed |
+| Add an item without a name | The application rejects the input | Passed |
+| Enter a quantity of 0 or a negative number | The application rejects the invalid quantity | Passed |
+| Display total items | The correct number of items is displayed | Passed |
+
+### Bug Found and Fixed
+
+During testing, a bug was identified with items loaded from Local Storage.
+
+**Problem:**  
+After refreshing the page, saved items were loaded as ordinary JavaScript objects. This meant that the `togglePurchased()` method from the `ShoppingItem` class was not available on the loaded items.
+
+**Solution:**  
+The saved objects are now converted back into `ShoppingItem` objects when the application loads. The item's ID, quantity, and purchased status are also preserved.
+
+**Result:**  
+After the fix, purchased items remain correctly saved after refreshing the page, and their purchased status can still be changed.
