@@ -14,8 +14,6 @@ Edomobi Chinwendu Angel   | 2023030213343
 Egbuonu Mmessoma Jennifer | 2023030211315
 Edeh Blessing Chinecherem | 2023030211906
 Egwuma Victor Chinagorom  | 2023030210672
-Member 5| 
-Member 6| 
 
 ---
 
@@ -126,7 +124,6 @@ Core Features
 
 Testing
 
-## Testing
 
 The application was tested using both normal inputs and unusual or invalid inputs to ensure that the required features work correctly.
 
