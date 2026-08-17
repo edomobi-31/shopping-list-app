@@ -1,23 +1,21 @@
-Shopping List Application
+#Shopping List Application
 
-Group Project Information
+##Group Project Information
 
 Course: Introduction to Software Development
-course code: EMCICT311
 Project: Shopping List Application
 Project Type: Group Mini Project
 
-Group Members
-
-Name                      | Registration Number
-Edomobi Chinwendu Angel   | 2023030213343
-Egbuonu Mmessoma Jennifer | 2023030211315
-Edeh Blessing Chinecherem | 2023030211906
-Egwuma Victor Chinagorom  | 2023030210672
+##Group Members
+                  
+Edomobi Chinwendu Angel   
+Egbuonu Mmessoma Jennifer 
+Edeh Blessing Chinecherem 
+Egwuma Victor Chinagorom  
 
 ---
 
-Project Description
+##Project Description
 
 This is a web-based Shopping List Application that helps users prepare and manage items before going to the market.
 
@@ -25,7 +23,7 @@ Users can add shopping items, specify quantities, mark items as purchased, edit 
 
 ---
 
-Project Requirements
+##Project Requirements
 
 The application must:
 
@@ -37,7 +35,7 @@ The application must:
 
 ---
 
-Classes and Functions
+##Classes and Functions
 
 Class
 
@@ -58,7 +56,7 @@ Functions
 
 ---
 
-Expected Input and Output
+##Expected Input and Output
 
 Feature| Expected Input| Expected Output
 Add item| Item name and quantity| The new item appears in the shopping list
@@ -71,7 +69,7 @@ Total items| Shopping items in the list| The total number of items is displayed
 
 ---
 
-Input Validation
+##Input Validation
 
 The application prevents invalid entries by:
 
@@ -83,7 +81,7 @@ The application prevents invalid entries by:
 
 ---
 
-Technologies Used
+##Technologies Used
 
 - HTML
 - CSS
@@ -92,13 +90,13 @@ Technologies Used
 
 ---
 
-Responsive Design
+##Responsive Design
 
 The application uses responsive CSS so that the layout adapts to smaller screens such as mobile devices.
 
 ---
 
-How to Run
+##How to Run
 
 1. Download or clone the project repository.
 2. Open the project folder.
@@ -107,7 +105,7 @@ How to Run
 
 ---
 
-Core Features
+##Core Features
 
 - Add shopping items
 - Specify quantity
@@ -122,7 +120,7 @@ Core Features
 
 ---
 
-Testing
+##Testing
 
 
 The application was tested using both normal inputs and unusual or invalid inputs to ensure that the required features work correctly.
