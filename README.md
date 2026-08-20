@@ -12,7 +12,6 @@
 | Name | Registration Number |
 |------|---------------------|
 | Edomobi Chinwendu Angel | 2023030213343 |
-| Egbuonu Mnessoma Jennifer | 2023030211315 |
 | Edeh Blessing Chinencherem | 2023030211906 |
 | Egwuma Victor Chinagorom | 2023030210672 | 
 
